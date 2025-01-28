@@ -1,4 +1,6 @@
 ---
+import Navigation from '../components/Navigation.astro';
+import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 const pageTitle = "Posts";
 ---
@@ -12,9 +14,7 @@ const pageTitle = "Posts";
 		<title>{pageTitle}</title>
 	</head>
     <body>
-        <a href="/">Home</a>
-        <a href="/about/">About</a>
-        <a href="/posts/">Posts</a>
+        <Navigation />
       
         <h1>{pageTitle}</h1>
         <ul>
@@ -28,6 +28,7 @@ const pageTitle = "Posts";
             <li><a href="/content/solderless-method-to-connect-esp-12-module-to-breadboard">Solderless method to connect ESP-12 module to breadboard</a>
             <li><a href="/content/upgrading-sonoff-wireless-smart-switch-flash-memory-esp8266">Upgrading Sonoff Wireless Smart Switch Flash Memory (ESP8266)</a>
         </ul>
+        <Footer />
     </body>
 </html>
 
