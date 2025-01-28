@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Upgrading Sonoff Wireless Smart Switch Flash Memory (ESP8266)'
 description: 'Upgrading Sonoff Wireless Smart Switch Flash Memory (ESP8266)'
 pubDate: '2016-09-07'

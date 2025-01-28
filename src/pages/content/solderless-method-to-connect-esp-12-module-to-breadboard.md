@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Solderless method to connect ESP-12 module to breadboard'
 description: 'Solderless method to connect ESP-12 module to breadboard'
 pubDate: '2016-04-17'

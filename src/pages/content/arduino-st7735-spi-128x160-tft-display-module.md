@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arduino ST7735 SPI 128×160 TFT Display Module'
 description: 'Arduino ST7735 SPI 128×160 TFT Display Module'
 pubDate: '2016-11-01'

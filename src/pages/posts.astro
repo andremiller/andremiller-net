@@ -1,22 +1,9 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Posts";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-    <body>
-        <Navigation />
-      
-        <h1>{pageTitle}</h1>
+<BaseLayout pageTitle={pageTitle}>
         <ul>
             <li><a href="/content/arduino-interface-to-mpu9250-mpu9255-gyroscope-accelerometer-and-compass">Arduino interface to MPU9250 / MPU9255 gyroscope, accelerometer, and compass</a>
             <li><a href="/content/arduino-st7735-spi-128x160-tft-display-module">Arduino ST7735 SPI 128×160 TFT Display Module</a>
@@ -28,7 +15,4 @@ const pageTitle = "Posts";
             <li><a href="/content/solderless-method-to-connect-esp-12-module-to-breadboard">Solderless method to connect ESP-12 module to breadboard</a>
             <li><a href="/content/upgrading-sonoff-wireless-smart-switch-flash-memory-esp8266">Upgrading Sonoff Wireless Smart Switch Flash Memory (ESP8266)</a>
         </ul>
-        <Footer />
-    </body>
-</html>
-
+</BaseLayout>

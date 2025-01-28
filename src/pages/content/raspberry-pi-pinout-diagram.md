@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Raspberry Pi Pinout Diagram'
 description: 'Raspberry Pi Pinout Diagram'
 pubDate: '2013-01-20'

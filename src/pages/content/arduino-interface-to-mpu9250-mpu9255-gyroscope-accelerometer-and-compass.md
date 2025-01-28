@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arduino interface to MPU9250 / MPU9255 gyroscope, accelerometer, and compass'
 description: 'Arduino interface to MPU9250 / MPU9255 gyroscope, accelerometer, and compass'
 pubDate: '2016-11-09'

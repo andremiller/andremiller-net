@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Programming an ITEAD Sonoff Wireless Smart Switch (ESP8266)'
 description: 'Programming an ITEAD Sonoff Wireless Smart Switch (ESP8266)'
 pubDate: '2016-08-07'

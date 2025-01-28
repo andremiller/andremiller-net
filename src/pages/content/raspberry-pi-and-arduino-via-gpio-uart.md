@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Raspberry Pi and Arduino via GPIO UART'
 description: 'Raspberry Pi and Arduino via GPIO UART'
 pubDate: 'July 10, 2012'

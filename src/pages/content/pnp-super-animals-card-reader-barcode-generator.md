@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'PnP Super Animals Card Reader Barcode Generator'
 description: 'PnP Super Animals Card Reader Barcode Generator'
 pubDate: '2016-08-13'

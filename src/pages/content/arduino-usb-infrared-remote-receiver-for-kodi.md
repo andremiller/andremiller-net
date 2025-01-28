@@ -1,4 +1,5 @@
 ---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arduino USB Infrared Remote Receiver for Kodi'
 description: 'Arduino USB Infrared Remote Receiver for Kodi'
 pubDate: '2016-11-16'
