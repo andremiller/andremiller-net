@@ -1,5 +1,6 @@
 ---
-
+import '../styles/global.css';
+const pageTitle = "Posts";
 ---
 
 <html lang="en">
@@ -8,14 +9,14 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
 	</head>
     <body>
         <a href="/">Home</a>
         <a href="/about/">About</a>
         <a href="/posts/">Posts</a>
       
-        <h1>Posts</h1>
+        <h1>{pageTitle}</h1>
         <ul>
             <li><a href="/content/arduino-interface-to-mpu9250-mpu9255-gyroscope-accelerometer-and-compass">Arduino interface to MPU9250 / MPU9255 gyroscope, accelerometer, and compass</a>
             <li><a href="/content/arduino-st7735-spi-128x160-tft-display-module">Arduino ST7735 SPI 128×160 TFT Display Module</a>
