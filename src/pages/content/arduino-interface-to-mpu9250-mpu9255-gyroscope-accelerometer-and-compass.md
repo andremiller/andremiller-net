@@ -5,7 +5,7 @@ description: 'Arduino interface to MPU9250 / MPU9255 gyroscope, accelerometer, a
 pubDate: '2016-11-09'
 image: '/images/mpu9250_1_r.jpg'
 categories: ['Electronics']
-tags: ['sensors', 'arduino', 'electronics']
+tags: ['arduino', 'microcontroller']
 ---
 
 This post is a quick introduction to get an MPU9250 gyroscope,

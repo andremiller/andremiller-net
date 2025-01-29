@@ -5,7 +5,7 @@ description: 'Upgrading Sonoff Wireless Smart Switch Flash Memory (ESP8266)'
 pubDate: '2016-09-07'
 image: '/images/sonoff_new_flash.jpg'
 categories: ['Electronics', 'Home Automation', 'Programming']
-tags: ['esp8266', 'electronics']
+tags: ['arduino', 'esp8266', 'microcontroller', 'sonoff']
 ---
 
 I’ve been playing around with the ESP8266 based Sonoff Wireless Smart

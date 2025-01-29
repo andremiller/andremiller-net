@@ -5,7 +5,7 @@ description: 'Raspberry Pi and Arduino via GPIO UART'
 pubDate: 'July 10, 2012'
 image: '/images/arduino_rpi_serial_hardware.jpg'
 categories: ['Electronics']
-tags: ['arduino', 'electronics']
+tags: ['raspberry pi', 'arduino', 'microcontroller', 'sbc']
 ---
 
 *NOTE:* This is an older post, and instead of using a CD4050 it might be easier to use a bi-directional level shifter module.

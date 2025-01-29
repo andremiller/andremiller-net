@@ -5,7 +5,7 @@ description: 'Arduino ST7735 SPI 128×160 TFT Display Module'
 pubDate: '2016-11-01'
 image: '/images/tftlcd18_1.jpg'
 categories: ['Electronics']
-tags: ['arduino', 'electronics']
+tags: ['arduino', 'microcontroller']
 ---
 
 A quick guide describing how to hook up an ST7735 128×160 SPI TFT

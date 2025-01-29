@@ -5,7 +5,7 @@ description: 'Raspberry Pi Pinout Diagram'
 pubDate: '2013-01-20'
 image: '/images/RaspberryPiPinouts2.png'
 categories: ['Electronics']
-tags: ['raspberry pi', 'electronics']
+tags: ['raspberry pi', 'sbc', 'documentation']
 ---
 
 Pinouts for the Raspberry Pi P1 header, showing pins that can be used
