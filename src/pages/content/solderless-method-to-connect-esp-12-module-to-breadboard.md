@@ -5,6 +5,7 @@ description: 'Solderless method to connect ESP-12 module to breadboard'
 pubDate: '2016-04-17'
 image: '/images/solderless_esp12_breakout.jpg'
 categories: ['Electronics']
+tags: ['esp8266', 'electronics']
 ---
 
 The ESP8266 ESP-12 module has a 2mm pitch, making it difficult to use on

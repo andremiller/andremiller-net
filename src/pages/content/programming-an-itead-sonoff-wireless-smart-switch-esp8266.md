@@ -5,6 +5,7 @@ description: 'Programming an ITEAD Sonoff Wireless Smart Switch (ESP8266)'
 pubDate: '2016-08-07'
 image: '/images/sonoff-program-4.jpg'
 categories: ['Electronics', 'Home Automation']
+tags: ['arduino', 'electronics']
 ---
 
 I purchased some of these wireless smart switches from ITEAD, but didn’t

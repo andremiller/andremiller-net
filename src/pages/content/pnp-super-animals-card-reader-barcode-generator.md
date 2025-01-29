@@ -5,7 +5,7 @@ description: 'PnP Super Animals Card Reader Barcode Generator'
 pubDate: '2016-08-13'
 image: '/images/pnp_super_animals_card_reader.jpg'
 categories: ['Uncategorized']
-
+tags: ['arduino', 'electronics']
 ---
 
 In this article I attempt to decode the barcode used for PnP’s “Super
