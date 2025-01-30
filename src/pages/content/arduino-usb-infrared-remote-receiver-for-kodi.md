@@ -5,7 +5,7 @@ description: 'Arduino USB Infrared Remote Receiver for Kodi'
 pubDate: '2016-11-16'
 image: '/images/ir_recv_usb.jpg'
 categories: ['Electronics', 'Home Automation', 'Programming']
-tags: ['arduino', 'electronics', 'infrared', 'kodi']
+tags: ['arduino', 'infrared', 'kodi']
 ---
 
 # Introduction

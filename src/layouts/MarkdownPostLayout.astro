@@ -1,32 +1,56 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 const { frontmatter } = Astro.props;
+const postSlug = Astro.url.pathname.split('/').pop().replace('.md', ''); // This grabs the filename and removes the '.md' extension
+
+const disqusShortname = 'andremiller'; // Replace this with your actual Disqus shortname
+// Format date nicely
+const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+  year: "numeric", month: "long", day: "numeric"
+});
 ---
 <BaseLayout pageTitle={frontmatter.title}>
-    <p>Published on {frontmatter.pubDate}</p>
-    <div class="tags">
-        {frontmatter.tags.map((tag: string) => (
-          <p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-        ))}
-      </div>
-    <slot />
-</BaseLayout>
-<style>
-    a {
-      color: #00539F;
-    }
+    <article class="prose prose-lg prose-stone dark:prose-invert mx-auto max-w-3xl md:max-w-5xl">
+      <!-- Publish Date -->
+      <p class="text-gray-500 dark:text-gray-400 text-sm italic">
+        Published on {formattedDate}
+      </p>
   
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-    }
+      <!-- Tag List -->
+      {frontmatter.tags.length > 0 && (
+        <div class="flex flex-wrap gap-2 my-4">
+          {frontmatter.tags.map((tag: string) => (
+            <a href={`/tags/${tag}`} 
+               class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">
+              #{tag}
+            </a>
+          ))}
+        </div>
+      )}
   
-    .tag {
-      margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: .5em;
-      padding: .5em 1em;
-      font-size: 1.15em;
-      background-color: #F8FCFD;
-    }
-  </style>
+      <slot />
+    </article>
+   <!-- Disqus Comments Section -->
+  <div id="disqus_thread"></div>
+
+  <div id="disqus_thread"></div>
+  <script>
+      /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+      
+      var disqus_config = function () {
+      this.page.url = window.location.href;  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = {postSlug}; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+      };
+      
+      (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://andremiller.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+      })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  </BaseLayout>

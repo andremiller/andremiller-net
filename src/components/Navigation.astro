@@ -1,8 +1,23 @@
 ---
+const links = [
+  { href: "/", label: "Posts" },
+  { href: "/tags/", label: "Tags" },
+  { href: "/about/", label: "About" }
+];
 ---
-<div class="nav-links">
-    <a href="/">Home</a>
-    <a href="/about/">About</a>
-    <a href="/posts/">Posts</a>
-    <a href="/tags/">Tags</a>
-</div>
+<nav class="bg-white dark:bg-gray-900 shadow-md py-4">
+    <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+      <!-- Site Logo / Title -->
+      <a href="/" class="text-xl font-bold text-gray-900 dark:text-gray-100">Andre Miller / ZS1XOR</a>
+  
+      <!-- Navigation Links -->
+      <div class="flex space-x-6">
+        {links.map(({ href, label }) => (
+          <a href={href} 
+             class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors">
+            {label}
+          </a>
+        ))}
+      </div>
+    </div>
+  </nav>

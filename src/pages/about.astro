@@ -1,7 +1,23 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "About Me";
 ---
-<BaseLayout pageTitle={pageTitle}>
-    <p>Placeholder page</p>
+
+<BaseLayout pageTitle={`About this site`}>
+  <div class="max-w-3xl mx-auto p-6">
+
+    <!-- About Content with Image -->
+    <div class="flex items-center space-x-6">
+      <!-- Image -->
+      <img src="/favicon.png" alt="About Image" class="w-1/3 rounded-lg shadow-lg" />
+
+      <!-- Text -->
+      <div class="flex-1">
+
+        <p class="text-lg text-gray-700 dark:text-gray-300">
+          A place where I share my thoughts and experiences on various topics, ranging from technology to hobbies.
+        </p>
+      </div>
+    </div>
+
+  </div>
 </BaseLayout>

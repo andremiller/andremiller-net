@@ -75,20 +75,28 @@ card number (browser needs JavaScript enabled, only tested on Chrome):
 Note: To generate barcodes for the second set, “South African Super
 Animals” just add 108 to the card number.
 
-<script src="/projects/pnp_barcode_generator/jquery.min.js"></script></p>
-<table>
-<tbody>
-<tr>
-<td><input id="card_number" type="number" value="19"></td>
-<td><button id="setBarCode">Generate Barcode</button></td>
-</tr>
-<tr>
-<td colspan="2"><canvas id="canvas" width="300" height="120"></canvas><br />
-<button id="printCard">Print</button></td>
-</tr>
-</tbody>
-</table>
-<p><script src="/projects/pnp_barcode_generator/super_animals_barcode_generator.js"></script></p>
+
+
+
+
+<script src="/projects/pnp_barcode_generator/jquery.min.js"></script>
+
+<div class="max-w-md mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
+<h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Barcode Generator</h2>
+
+<div class="flex space-x-3">
+<input id="card_number" type="number" value="19" class="w-full p-2 border border-gray-300 dark:border-gray-600 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200 focus:ring-2 focus:ring-blue-500 focus:outline-none" />
+<button id="setBarCode"  class="px-4 py-2 bg-blue-600 text-white rounded-md shadow hover:bg-blue-700 transition">Generate</button>
+</div>
+<div class="mt-4 flex flex-col items-center">
+<canvas id="canvas" width="300" height="120" class="border border-gray-300 dark:border-gray-600 rounded-lg bg-white"></canvas>
+<button id="printCard" class="mt-4 px-4 py-2 bg-gray-600 text-white rounded-md shadow hover:bg-gray-700 transition">Print</button>
+</div>
+</div>
+
+<script src="/projects/pnp_barcode_generator/super_animals_barcode_generator.js"></script>
+
+
 
 If you print it on normal paper you can fold the paper in half to make
 it a bit sturdier to scan.

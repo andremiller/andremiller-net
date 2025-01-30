@@ -1,7 +1,47 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+const posts = Object.values(import.meta.glob('./content/*.md', { eager: true }));
+
+// Sort the posts by pubDate, newest first
+const sortedPosts = posts.sort((a, b) => {
+  const dateA = new Date(a.frontmatter.pubDate).getTime();
+  const dateB = new Date(b.frontmatter.pubDate).getTime();
+  
+  return dateB - dateA;  // Newest first
+});
 ---
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-</BaseLayout>
+
+<BaseLayout pageTitle={`All Posts`}>
+    <div class="max-w-3xl mx-auto">
+
+      {posts.length > 0 ? (
+        <ul class="space-y-6">
+          {sortedPosts.map((post: any) => (
+            <li class="flex items-center space-x-4 border-b border-gray-200 dark:border-gray-700 pb-4">
+              <!-- Post Image -->
+              <a href={post.url} class="shrink-0">
+                <img src={post.frontmatter.image} 
+                     alt={`Thumbnail for ${post.frontmatter.title}`} 
+                     class="w-20 h-20 object-cover rounded-lg shadow-md transition hover:scale-105" />
+              </a>
+  
+              <!-- Post Details -->
+              <div class="flex-1">
+                <a href={post.url} 
+                   class="block text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
+                  {post.frontmatter.title}
+                </a>
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                  Published on {new Date(post.frontmatter.pubDate).toLocaleDateString("en-US", { 
+                    year: "numeric", month: "long", day: "numeric" 
+                  })}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p class="text-gray-500 dark:text-gray-400 italic">No posts found for this tag.</p>
+      )}
+    </div>
+  </BaseLayout>
