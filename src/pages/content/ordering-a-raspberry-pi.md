@@ -59,7 +59,7 @@ It was in a bubble envelope package, containing a small cardboard box:
 
 ![order_pi_package.jpg](/images/order_pi_package.jpg)
 
-And the cardboard box contained the Raspberri Pi inside an anti-static bag, wedged between two pieces of foam and two pamphlets:
+And the cardboard box contained the Raspberry Pi inside an anti-static bag, wedged between two pieces of foam and two pamphlets:
 
 ![order_pi_box_open.jpg](/images/order_pi_box_open.jpg)
 

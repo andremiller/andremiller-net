@@ -70,7 +70,7 @@ waiting for you to press buttons on your remote.
 
 Each line is a decode type (the protocol type your remote is using)
 followed by a dash and then the hex code for the particular button. Some
-remotes will send diffrent codes for a button press vs a release and
+remotes will send different codes for a button press vs a release and
 some will also send additional codes when you hold the button down. This
 sketch is very basic, and we are only using the hex code for a single
 button press.
@@ -92,7 +92,7 @@ press.
 
 # Run mode
 
-After you made a note of all your hexcodes comment out the test mode
+After you made a note of all your hex codes comment out the test mode
 define:
 
 ``` c++

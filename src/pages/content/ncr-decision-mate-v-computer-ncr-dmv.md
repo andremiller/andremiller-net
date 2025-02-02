@@ -11,7 +11,7 @@ tags: ['z80', '8088', 'repair', 'crt', 'floppy']
 
 ![ncr_dmv.jpg](/images/dmv/ncr_dmv.jpg)
 
-I received this computer from a very kind person advertisting floppy disks on our neighbourhood WhatsApp group in December 2024. When I enquiried, I was surprised to learn that they also had a few other items, one of which was this NCR DMV! They received it after cleaning out a garage for someone else. Unfortunately all the floppies were blank so I had no software and the machine showed no sign of life when I tried to turn it on.
+I received this computer from a very kind person advertising floppy disks on our neighbourhood WhatsApp group in December 2024. When I inquired, I was surprised to learn that they also had a few other items, one of which was this NCR DMV! They received it after cleaning out a garage for someone else. Unfortunately all the floppies were blank so I had no software and the machine showed no sign of life when I tried to turn it on.
 
 I managed to repair the machine, write software to floppy disks and boot it.
 
@@ -32,7 +32,7 @@ When I tried to power it on, it had no life, not even the power LED came on. Thi
 
 ### Power Supply
 
-After opening up the machine, a visual inspection of the power supply immediately revealed that the capacitors used on the rectification board were the culprits. Removing the board showed the capicitor leaking created a short across the tracks.
+After opening up the machine, a visual inspection of the power supply immediately revealed that the capacitors used on the rectification board were the culprits. Removing the board showed the capacitor leaking created a short across the tracks.
 
 ![dmv_repair_old_psu_caps.jpg](/images/dmv/dmv_repair_old_psu_caps.jpg)
 ![dmv_repair_psu_short.jpeg](/images/dmv/dmv_repair_psu_short.jpeg)
@@ -86,7 +86,7 @@ Replacing C3 resolved the problem with the shrunken vertical height.
 
 ### Making Floppies
 
-I found software online for the DMV, but only in Teledisk format. This sofware runs in DOS on an IBM PC Compatible, so I used a 286 machine with a 360K floppy drive to write the teledisk images to a floppy.
+I found software online for the DMV, but only in Teledisk format. This software runs in DOS on an IBM PC Compatible, so I used a 286 machine with a 360K floppy drive to write the Teledisk images to a floppy.
 
 - Teledisk 2.16 (DOS exe) [💾 teled216.zip](/projects/dmv/utils/teled216.zip)
 
@@ -112,11 +112,11 @@ I found software online for the DMV, but only in Teledisk format. This sofware r
 
 ## Floppy Drive Emulation
 
-Emulation of the floppy drive with a Gotek running FlashFloppy worked, afted converting the Teledisk images to HFE format. Which both HxC and FlashFloppy will read.
+Emulation of the floppy drive with a Gotek running FlashFloppy worked, after converting the Teledisk images to HFE format. Which both HxC and FlashFloppy will read.
 
 ### Converting floppy images
 
-Use [HxCFloppyEmulator](https://hxc2001.com/download/floppy_drive_emulator/#sdhxc) software (I used v2.16.10.1) to convery the images from Teledisk to HFE
+Use [HxCFloppyEmulator](https://hxc2001.com/download/floppy_drive_emulator/#sdhxc) software (I used v2.16.10.1) to convert the images from Teledisk to HFE
 
 ![dmv_convert_teledisk.png](/images/dmv/dmv_convert_teledisk.png)
 
@@ -206,7 +206,6 @@ I dumped the following ROMS while I had the machine dismantled
   - Software
   - Photos
   - Schematics
-
 
 ## Additional Photos
 
