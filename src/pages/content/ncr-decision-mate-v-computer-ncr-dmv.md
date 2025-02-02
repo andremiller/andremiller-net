@@ -17,7 +17,7 @@ I managed to repair the machine, write software to floppy disks and boot it.
 
 ### Model number
 
-- **Model:** 1102-6502
+- **Model:** 1102-6501
 - **Serial:** 17-15178053
 - **Tracer:** 17-011900
 - **Keyboard:** KB H0150-STD1-02-17
