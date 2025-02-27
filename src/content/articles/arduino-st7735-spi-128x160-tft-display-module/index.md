@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arduino ST7735 SPI 128×160 TFT Display Module'
 description: 'Arduino ST7735 SPI 128×160 TFT Display Module'
 pubDate: '2016-11-01'
-image: '/images/tftlcd18_1.jpg'
+image: 'tftlcd18_1.jpg'
 categories: ['Electronics']
 tags: ['arduino', 'microcontroller']
 ---
@@ -11,7 +10,7 @@ tags: ['arduino', 'microcontroller']
 A quick guide describing how to hook up an ST7735 128×160 SPI TFT
 display to your Arduino and get the library to display something.
 
-![image](/images/tftlcd18_1.jpg)
+![image](tftlcd18_1.jpg)
 
 On the back it has two sets of pins and an SD card holder. I used the
 pins that already had a pin header soldered in.
@@ -23,11 +22,11 @@ using 5V signal lines from the Arduino. Using the IO directly from the
 Arduino just resulted in a white screen. Luckily this did not damage my
 module.
 
-![image](/images/tftlcd18_3.jpg)
+![image](tftlcd18_3.jpg)
 
 I had to use level shifters to convert the Arduino IO to 3.3V
 
-![image](/images/level_shift_module.jpg)
+![image](level_shift_module.jpg)
 
 I used two 4 channel level shifters because that’s the only ones I had
 and the display module required 5 IOs, but you also get 8 channel ones.
@@ -92,4 +91,4 @@ following line:
 Ucglib_ST7735_18x128x160_HWSPI ucg(/*cd=*/ 9 , /*cs=*/ 10, /*reset=*/ 8);
 ```
 
-![image](/images/tftlcd18_4.jpg)
+![image](tftlcd18_4.jpg)

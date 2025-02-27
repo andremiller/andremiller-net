@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Raspberry Pi and Arduino via GPIO UART'
 description: 'Raspberry Pi and Arduino via GPIO UART'
 pubDate: 'July 10, 2012'
-image: '/images/arduino_rpi_serial_hardware.jpg'
+image: 'arduino_rpi_serial_hardware.jpg'
 categories: ['Electronics']
 tags: ['raspberry pi', 'arduino', 'microcontroller', 'sbc']
 ---
@@ -14,7 +13,7 @@ In an attempt to get my Raspberry Pi talking to my Arduino I’m exploring vario
 
 To make testing easier I wanted to keep the Arduino’s serial connected via USB to my PC so I can print messages there and read it with the Serial Monitor. This meant using the SoftSerial library to implement a second serial port to talk to the Raspberry Pi. To protect my Raspberry Pi and to convert the 5V of the Arduino to 3.3V the Raspberry Pi needs I used a CD4050.
 
-![image](/images/arduino_rpi_serial_hardware.jpg)
+![image](arduino_rpi_serial_hardware.jpg)
 
 To show how this works the Arduino is running a small program that reads from the Raspberry Pi’s and copies this to my PC via USB.
 
@@ -78,7 +77,7 @@ void loop() // run over and over
 
 Connect the Arduino to the Raspberry Pi:
 
-![image](/images/arduino_rpi_serial_schem.png)
+![image](arduino_rpi_serial_schem.png)
 
 Raspberry Pi Pins used: 
 - 1 : 3.3V
@@ -102,6 +101,6 @@ Connected to PC
 
 If you then reboot your Raspberry Pi, the console messages should be echoed back to the Serial Monitor running your PC and leave you with a login prompt from the getty:
 
-![image](/images/arduino_rpi_serial_console.png)
+![image](arduino_rpi_serial_console.png)
 
 If you change ‘No Line Ending’ to ‘Newline’ you can enter your username and are then prompted for a password. Unfortunately the password doesn’t work. I still need to figure out why it’s not accepting my password. I suspect it’s to do with a line termination character or something.

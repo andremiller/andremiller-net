@@ -1,28 +1,43 @@
 ---
-import BaseLayout from './BaseLayout.astro';
-const { frontmatter } = Astro.props;
+import BaseLayout from '/src/layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+
+// Fetch all blog posts at build time
+export async function getStaticPaths() {
+  const Articles = await getCollection("articles");
+  return Articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+// Get the current post from `props`
+const { article } = Astro.props;
+
+// Render the Markdown content
+const { Content, headings } = await article.render(); // ✅ Extract headings
+
 const postSlug = Astro.url.pathname.split('/').pop().replace('.md', ''); // This grabs the filename and removes the '.md' extension
 
 // Table of contents
 import { type CollectionEntry } from "astro:content";
-import TableOfContents from "../components/TableOfContents.astro";
+import TableOfContents from "/src/components/TableOfContents.astro";
 
 interface Props {
-  post: CollectionEntry<"blog">;
+  article: CollectionEntry<"blog">;
   headings: import("astro").MarkdownHeading[];
 }
 
-const { post, headings } = Astro.props as Props;
 
 // Disqus
 const disqusShortname = 'andremiller';
 
 // Format date nicely
-const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+const formattedDate = new Date(article.data.pubDate).toLocaleDateString("en-US", {
   year: "numeric", month: "long", day: "numeric"
 });
 ---
-<BaseLayout pageTitle={frontmatter.title}>
+<BaseLayout pageTitle={article.data.title}>
   <div class="flex flex-col md:flex-row md:gap-8">
     <article class="prose prose-lg prose-stone dark:prose-invert mx-auto max-w-3xl md:max-w-5xl">
       <!-- Publish Date -->
@@ -31,9 +46,9 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-US", 
       </p>
   
       <!-- Tag List -->
-      {frontmatter.tags.length > 0 && (
+      {article.data.tags.length > 0 && (
         <div class="flex flex-wrap gap-2 my-4">
-          {frontmatter.tags.map((tag: string) => (
+          {article.data.tags.map((tag: string) => (
             <a href={`/tags/${tag}`} 
                class="bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition">
               #{tag}
@@ -42,6 +57,7 @@ const formattedDate = new Date(frontmatter.pubDate).toLocaleDateString("en-US", 
         </div>
       )}
   
+  <Content />
       <slot />
     </article>
 

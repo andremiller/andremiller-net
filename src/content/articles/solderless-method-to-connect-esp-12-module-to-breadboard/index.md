@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Solderless method to connect ESP-12 module to breadboard'
 description: 'Solderless method to connect ESP-12 module to breadboard'
 pubDate: '2016-04-17'
-image: '/images/solderless_esp12_breakout.jpg'
+image: 'solderless_esp12_breakout.jpg'
 categories: ['Electronics']
 tags: ['esp8266', 'microcontroller', 'prototyping']
 ---
@@ -36,4 +35,4 @@ this foam though.
 I find this is a quick way to test new modules before soldering them
 into a more permanent project.
 
-![image](/images/solderless_esp12_breakout.jpg)
+![image](solderless_esp12_breakout.jpg)

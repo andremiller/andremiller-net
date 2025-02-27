@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Mounting a hard disk image including partitions using Linux'
 description: 'Mounting a hard disk image including partitions using Linux'
 pubDate: 'January 22, 2008'
-image: '/favicon.png'
+image: 'post.png'
 categories: ['System Administration']
 tags: ['linux']
 ---

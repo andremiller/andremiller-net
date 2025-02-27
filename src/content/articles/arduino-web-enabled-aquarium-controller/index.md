@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arduino Web Enabled Aquarium Controller'
 description: 'Arduino Web Enabled Aquarium Controller'
 pubDate: 'July 10, 2012'
-image: '/images/arduino_aquarium_web_temp2.png'
+image: 'arduino_aquarium_web_temp2.png'
 categories: ['Electronics']
 tags: ['arduino', 'microcontroller', 'home automation']
 ---
@@ -27,22 +26,22 @@ I also have the following hardware, but never got around to adding them to the p
 - DS1307 Real Time Clock
 - 8 Channel 250V 10A Relay Module
 
-![Arduino Aquarium Hardware](/images/arduino_aquarium_hardware.jpg)
+![Arduino Aquarium Hardware](arduino_aquarium_hardware.jpg)
 
 And here are a few screenshots of the program running on the arduino with 5 temperature sensors. The temperature sensors all connect to the same pin, and the ‘Scan’ button scans for probes and sets their resolution. The ‘Temperature’ button then reports the temperature for each of the probes.
 
-![Arduino aquarium web temp init](/images/arduino_aquarium_web_temp_init.png)
-![Arduino aquarium web temp 2](/images/arduino_aquarium_web_temp2.png)
+![Arduino aquarium web temp init](arduino_aquarium_web_temp_init.png)
+![Arduino aquarium web temp 2](arduino_aquarium_web_temp2.png)
 
 And this page shows that other dynamic data can also be added. In this case it shows the current values of the Analog input pins.
 
-![Arduino aquarium web analog](/images/arduino_aquarium_web_analog.png)
+![Arduino aquarium web analog](arduino_aquarium_web_analog.png)
 
 To build this project you will need the Arduino Mega2560 (an Uno might work, have not tested that), Ethernet Shield, MicroSD card, one or more DS18B20 temperature sensors and a 5K resistor.
 
 ## Project Source
 
-- [AndreArduinoAquarium-2012-03-08.zip](/projects/arduino_aquarium_controller/AndreArduinoAquarium-2012-03-08.zip)
+- [AndreArduinoAquarium-2012-03-08.zip](/files/arduino-web-enabled-aquarium-controller/AndreArduinoAquarium-2012-03-08.zip)
 
 Also included in the download is the stylesheet. On your SD card (which goes into your Ethernet Shield), create a www directory and place the style.css file in there.
 

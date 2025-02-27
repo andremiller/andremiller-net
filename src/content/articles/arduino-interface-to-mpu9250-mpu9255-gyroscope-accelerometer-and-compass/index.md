@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arduino interface to MPU9250 / MPU9255 gyroscope, accelerometer, and compass'
 description: 'Arduino interface to MPU9250 / MPU9255 gyroscope, accelerometer, and compass'
 pubDate: '2016-11-09'
-image: '/images/mpu9250_1_r.jpg'
+image: 'mpu9250_1_r.jpg'
 categories: ['Electronics']
 tags: ['arduino', 'microcontroller']
 ---
@@ -13,11 +12,11 @@ accelerometer, and compass module (so called 9 axis) connected and
 talking to an Arduino. I’m using a 5V Arduino Nano, because the
 description of this module says that it is 5V tolerant.
 
-![image](/images/mpu9250_1_r.jpg)
+![image](mpu9250_1_r.jpg)
 
 Markings on chip is: MP92 / W864A1 / 1410
 
-![image](/images/mpu9250_2_r.jpg)
+![image](mpu9250_2_r.jpg)
 
 The library I used is one included in the Arduino IDE Library manager.
 When I searched for 9250 there were couple of different ones, but the

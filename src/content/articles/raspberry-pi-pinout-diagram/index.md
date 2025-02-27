@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Raspberry Pi Pinout Diagram'
 description: 'Raspberry Pi Pinout Diagram'
 pubDate: '2013-01-20'
-image: '/images/RaspberryPiPinouts2.png'
+image: 'RaspberryPiPinouts2.png'
 categories: ['Electronics']
 tags: ['raspberry pi', 'sbc', 'documentation']
 ---
@@ -20,7 +19,7 @@ A few pins changed between Revision 1 and Revision 2 of the board (Pins
 Revision 1 GPIO number followed by a slash and then the Revision 2 GPIO
 number.
 
-![image](/images/RaspberryPiPinouts2.png)
+![image](RaspberryPiPinouts2.png)
 
 | Name               | Pin |         |         | Pin | Name             |
 |--------------------|-----|---------|---------|-----|------------------|

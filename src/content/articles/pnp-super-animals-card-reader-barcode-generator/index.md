@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'PnP Super Animals Card Reader Barcode Generator'
 description: 'PnP Super Animals Card Reader Barcode Generator'
 pubDate: '2016-08-13'
-image: '/images/pnp_super_animals_card_reader.jpg'
+image: 'pnp_super_animals_card_reader.jpg'
 categories: ['Uncategorized']
 tags: ['reverse engineering']
 ---
@@ -28,11 +27,11 @@ Here is a photo of the card reader, with a card in the scanning slot. On
 the front of the card there is also a number. This card, “Koala” is card
 number 19:
 
-![image](/images/pnp_super_animals_card_reader.jpg)
+![image](pnp_super_animals_card_reader.jpg)
 
 The back of the card, showing the barcode:
 
-![image](/images/pnp_super_animals_card.jpg)
+![image](pnp_super_animals_card.jpg)
 
 The barcode has 13 lines, each representing one bit. A thin line is “0”,
 and thick line is “1”. Let’s assume the bottom of the card represents
@@ -79,7 +78,7 @@ Animals” just add 108 to the card number.
 
 
 
-<script src="/projects/pnp_barcode_generator/jquery.min.js"></script>
+<script src="/files/pnp-super-animals-card-reader-barcode-generator/jquery.min.js"></script>
 
 <div class="max-w-md mx-auto bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
 <h2 class="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-4">Barcode Generator</h2>
@@ -94,7 +93,7 @@ Animals” just add 108 to the card number.
 </div>
 </div>
 
-<script src="/projects/pnp_barcode_generator/super_animals_barcode_generator.js"></script>
+<script src="/files/pnp-super-animals-card-reader-barcode-generator/super_animals_barcode_generator.js"></script>
 
 
 
@@ -103,12 +102,12 @@ it a bit sturdier to scan.
 
 # Print
 
-![image](/images/super_animals_print_1r.jpg)
+![image](super_animals_print_1r.jpg)
 
 # Fold
 
-![image](/images/super_animals_print_2r.jpg)
+![image](super_animals_print_2r.jpg)
 
 # Scan
 
-![image](/images/super_animals_print_3r.jpg)
+![image](super_animals_print_3r.jpg)

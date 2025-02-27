@@ -1,21 +1,31 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { Image } from 'astro:assets';
 
+
+// Define getStaticPaths function
 export async function getStaticPaths() {
-    const allPosts = Object.values(import.meta.glob('../content/*.md', { eager: true }));
-    const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+  // Fetch all posts from the "articles" collection
+  const allPosts = await getCollection("articles");
 
-    return uniqueTags.map((tag) => {
-        const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
-        return {
-            params: { tag },
-            props: { posts: filteredPosts },
-        };
-    });
+  // Extract unique tags from all posts
+  const uniqueTags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+
+  // Generate the static paths for each tag
+  return uniqueTags.map((tag) => ({
+    params: { tag },
+  }));
 }
 
+// Get the tag from URL params
 const { tag } = Astro.params;
-const { posts } = Astro.props;
+
+// Fetch all posts from the "articles" collection again to filter by the tag
+const allPosts = await getCollection("articles");
+const posts = allPosts.filter((post) => post.data.tags.includes(tag));
+
+const pageTitle = `Posts Tagged: #${tag}`;
 ---
 <BaseLayout pageTitle={`Posts Tagged: #${tag}`}>
     <div class="max-w-3xl mx-auto">
@@ -25,20 +35,23 @@ const { posts } = Astro.props;
           {posts.map((post: any) => (
             <li class="flex items-center space-x-4 border-b border-gray-200 dark:border-gray-700 pb-4">
               <!-- Post Image -->
-              <a href={post.url} class="shrink-0">
-                <img src={post.frontmatter.image} 
-                     alt={`Thumbnail for ${post.frontmatter.title}`} 
-                     class="w-20 h-20 object-cover rounded-lg shadow-md transition hover:scale-105" />
-              </a>
+              <a href={`/content/${post.slug}`} 
+                   class="block text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
+              <Image 
+                  src={post.data.image} 
+                  alt={`Thumbnail for ${post.data.title}`} 
+                  width={80} 
+                  height={80} 
+                  class="w-20 h-20 object-cover rounded-lg shadow-md transition hover:scale-105" />
   
               <!-- Post Details -->
               <div class="flex-1">
-                <a href={post.url} 
+                <a href={`/content/${post.slug}`} 
                    class="block text-lg font-medium text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition">
-                  {post.frontmatter.title}
+                  {post.data.title} 
                 </a>
                 <p class="text-sm text-gray-500 dark:text-gray-400">
-                  Published on {new Date(post.frontmatter.pubDate).toLocaleDateString("en-US", { 
+                  Published on {new Date(post.data.pubDate).toLocaleDateString("en-US", { 
                     year: "numeric", month: "long", day: "numeric" 
                   })}
                 </p>

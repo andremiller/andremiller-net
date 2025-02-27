@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Arduino USB Infrared Remote Receiver for Kodi'
 description: 'Arduino USB Infrared Remote Receiver for Kodi'
 pubDate: '2016-11-16'
-image: '/images/ir_recv_usb.jpg'
+image: 'ir_recv_usb.jpg'
 categories: ['Electronics', 'Home Automation', 'Programming']
 tags: ['arduino', 'infrared', 'kodi']
 ---
@@ -17,7 +16,7 @@ emulated USB keyboard.
 I’m using this to control Kodi, but you could use it to send keyboard
 commands to any program.
 
-![image](/images/ir_recv_usb.jpg)
+![image](ir_recv_usb.jpg)
 
 # Hardware used
 

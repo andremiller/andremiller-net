@@ -1,9 +1,8 @@
 ---
-layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Programming an ITEAD Sonoff Wireless Smart Switch (ESP8266)'
 description: 'Programming an ITEAD Sonoff Wireless Smart Switch (ESP8266)'
 pubDate: '2016-08-07'
-image: '/images/sonoff-program-4.jpg'
+image: 'sonoff-program-4.jpg'
 categories: ['Electronics', 'Home Automation']
 tags: ['arduino', 'esp8266', 'microcontroller', 'sonoff']
 ---
@@ -23,23 +22,23 @@ flash memory from 1MB to
 
 This is what you get in the box:
 
-![image](/images/sonoff-program-4.jpg)
+![image](sonoff-program-4.jpg)
 
 And opening up the case, you find two sets of unsoldered pins, the
 horizontal ones is used for a 433Mhz RF module, which I did not
 purchase. The vertical one brings out the RX and TX pins of the ESP8266
 along with 3.3V, GND and a GPIO pin.
 
-![image](/images/sonoff-program-3.jpg)
+![image](sonoff-program-3.jpg)
 
 I soldered on two pin headers, but the top vertical is not required to
 re-program it.
 
-![image](/images/sonoff-program-2.jpg)
+![image](sonoff-program-2.jpg)
 
 Then, you can hook it up to a USB to serial adapter.
 
-![image](/images/sonoff-program-1.jpg)
+![image](sonoff-program-1.jpg)
 
 In this orientation, the bottom pin is pin 1, and the connections are
 made as follows:
@@ -57,7 +56,7 @@ up. The schematic shows that GPIO0 is pulled HIGH with a resistor and
 that the switch (S1) is connected between GND and the same resistor.
 
 [Download Sonoff Smart Switch
-Schematic](/projects/sonoff/Sonoff_schmatic.pdf)
+Schematic](/files/programming-an-itead-sonoff-wireless-smart-switch-esp8266/Sonoff_schmatic.pdf)
 
 By holding in the tactile switch that is used to turn the lamp on/off
 before powering on the device, you can place the ESP8266 into
