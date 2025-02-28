@@ -87,7 +87,7 @@ the GraphicsTest example. Since I’m using a ST7735 SPI 128×160 display
 connected to the hardware SPI pins of the Arduino UNO I uncommented the
 following line:
 
-``` C++
+``` c++
 Ucglib_ST7735_18x128x160_HWSPI ucg(/*cd=*/ 9 , /*cs=*/ 10, /*reset=*/ 8);
 ```
 
