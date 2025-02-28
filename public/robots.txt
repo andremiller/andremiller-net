@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.andremiller.net/sitemap-index.xml
+Sitemap: https://andremiller.net/sitemap-index.xml

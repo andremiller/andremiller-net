@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site:'https://www.andremiller.net',
+  site:'https://andremiller.net',
   integrations: [
     tailwind(),
     sitemap({

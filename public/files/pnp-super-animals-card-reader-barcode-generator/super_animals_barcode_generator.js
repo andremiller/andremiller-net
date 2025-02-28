@@ -1,5 +1,5 @@
 // PnP Super Animals Card Reader Barcode Generator
-// https://www.andremiller.net/content/pnp-super-animals-card-reader-barcode-generator/
+// https://andremiller.net/content/pnp-super-animals-card-reader-barcode-generator/
 // Andre Miller 2016-08-13
 
 function setbarcode() {
